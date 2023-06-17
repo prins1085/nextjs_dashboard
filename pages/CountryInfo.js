@@ -58,10 +58,10 @@ const CountryInfo = ({ data }) => {
             {page.map((row) => {
               prepareRow(row);
               return (
-                <tr {...row.getRowProps()}>
+                <tr {...row.getRowProps()} className="bg-[#1F2A40]  hover:bg-[#283449]">
                   {row.cells.map((cell) => {
                     return (
-                      <td {...cell.getCellProps()} className="bg-[#1F2A40] px-3 py-4 border-b-2 border-[#515151]">
+                      <td {...cell.getCellProps()} className="px-3 py-4 border-b-[1px] border-[#515151]">
                         {cell.render("Cell")}
                       </td>
                     );
