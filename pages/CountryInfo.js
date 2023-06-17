@@ -35,7 +35,7 @@ const CountryInfo = ({ data }) => {
       <h1 className="text-center text-3xl font-bold">COUNTRY</h1>
       <p className="text-center mb-4 text-[#5BC9B4]">Country React Table</p>
     <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
-      <div className="overflow-x-auto border border-transparent rounded-md text-xs">
+      <div className="overflow-x-auto  border border-transparent rounded-md text-xs">
         <table {...getTableProps()} className="min-w-full text-left">
           <thead>
             {headerGroups.map((headerGroup) => (
