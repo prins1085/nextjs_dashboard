@@ -35,25 +35,6 @@ const Bargraph = ({ data }) => {
         indexBy="state"
         margin={{ top: 50, right: 130, bottom: 80, left: 80 }}
         padding={0.3}
-        defs={[
-          {
-            id: "lines",
-            type: "patternLines",
-            background: "inherit",
-            color: "#eed312",
-            rotation: -45,
-            lineWidth: 6,
-            spacing: 10,
-          },
-        ]}
-        fill={[
-          {
-            match: {
-              id: "tests",
-            },
-            id: "lines",
-          },
-        ]}
         axisBottom={{
           legend: "COUNTRY",
           legendPosition: "middle",

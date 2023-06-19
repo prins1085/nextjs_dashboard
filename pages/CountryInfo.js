@@ -1,6 +1,11 @@
 import React, { useMemo } from "react";
 import { COLUMNS } from "./components/columns";
-import { useGlobalFilter, usePagination, useSortBy, useTable } from "react-table";
+import {
+  useGlobalFilter,
+  usePagination,
+  useSortBy,
+  useTable,
+} from "react-table";
 import GlobalFilter from "./components/GlobalFilter";
 
 const CountryInfo = ({ data }) => {
@@ -18,7 +23,7 @@ const CountryInfo = ({ data }) => {
     pageCount,
     state,
     pageOptions,
-    setGlobalFilter
+    setGlobalFilter,
   } = useTable(
     {
       columns,
@@ -26,65 +31,97 @@ const CountryInfo = ({ data }) => {
     },
     useGlobalFilter,
     useSortBy,
-    usePagination,
+    usePagination
   );
 
   const { pageIndex, globalFilter } = state;
-  return (<>
-    <div className="container">
-      <h1 className="text-center text-3xl font-bold">COUNTRY</h1>
-      <p className="text-center mb-4 text-[#5BC9B4]">Country React Table</p>
-    <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
-      <div className="overflow-x-auto  border border-transparent rounded-md text-xs">
-        <table {...getTableProps()} className="min-w-full text-left">
-          <thead>
-            {headerGroups.map((headerGroup) => (
-              <tr {...headerGroup.getHeaderGroupProps()}>
-                {headerGroup.headers.map((column) => (
-                  <th
-                    {...column.getHeaderProps(column.getSortByToggleProps())}
-                    className="bg-[#3E4396]  px-3 py-5"
-                  >
-                    {column.render("Header")}
-                    <span>
-                  {column.isSorted ? (column.isSortedDesc ? " 🔽" : " 🔼") : ""}
-                </span>
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody {...getTableBodyProps()}>
-            {page.map((row) => {
-              prepareRow(row);
-              return (
-                <tr {...row.getRowProps()} className="bg-[#1F2A40]  hover:bg-[#283449]">
-                  {row.cells.map((cell) => {
-                    return (
-                      <td {...cell.getCellProps()} className="px-3 py-4 border-b-[1px] border-[#515151]">
-                        {cell.render("Cell")}
-                      </td>
-                    );
-                  })}
+  return (
+    <>
+      <div className="container">
+        <h1 className="text-center text-3xl font-bold">COUNTRY</h1>
+        <p className="text-center mb-4 text-[#5BC9B4]">Country React Table</p>
+        <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} />
+        <div className="overflow-x-auto  border border-transparent rounded-md text-xs">
+          <table {...getTableProps()} className="min-w-full text-left">
+            <thead>
+              {headerGroups.map((headerGroup) => (
+                <tr {...headerGroup.getHeaderGroupProps()}>
+                  {headerGroup.headers.map((column) => (
+                    <th
+                      {...column.getHeaderProps(column.getSortByToggleProps())}
+                      className="bg-[#3E4396]  px-3 py-5"
+                    >
+                      {column.render("Header")}
+                      <span>
+                        {column.isSorted
+                          ? column.isSortedDesc
+                            ? " 🔽"
+                            : " 🔼"
+                          : ""}
+                      </span>
+                    </th>
+                  ))}
                 </tr>
-              );
-            })}
-          </tbody>
-        </table>
-        <div className="text-right space-x-2 border border-transparent bg-[#3E4396]  px-3 py-3">
-          <span className="text-sm">
-            Page{" "}
-            <strong>
-              {pageIndex + 1} of {pageOptions.length}
-            </strong>
-          </span>
-          <button onClick={() => gotoPage(0)} className="bg-gray-50 text-gray-500 rounded-md px-3 py-2">{"<<"}</button>
-          <button onClick={() => previousPage()} className="bg-gray-50 text-gray-500 rounded-md px-3 py-2">Previous</button>
-          <button onClick={() => nextPage()} className="bg-gray-50 text-gray-500 rounded-md px-3 py-2">Next</button>
-          <button onClick={() => gotoPage(pageCount - 1)} className="bg-gray-50 text-gray-500 rounded-md px-3 py-2">{">>"}</button>
+              ))}
+            </thead>
+            <tbody {...getTableBodyProps()}>
+              {page.map((row) => {
+                prepareRow(row);
+                return (
+                  <tr
+                    {...row.getRowProps()}
+                    className="bg-[#1F2A40]  hover:bg-[#283449]"
+                  >
+                    {row.cells.map((cell) => {
+                      return (
+                        <td
+                          {...cell.getCellProps()}
+                          className="px-3 py-4 border-b-[1px] border-[#515151]"
+                        >
+                          {cell.render("Cell")}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          <div className="text-right space-x-2 border border-transparent bg-[#3E4396]  px-3 py-3">
+            <span className="text-sm">
+              Page{" "}
+              <strong>
+                {pageIndex + 1} of {pageOptions.length}
+              </strong>
+            </span>
+            <button
+              onClick={() => gotoPage(0)}
+              className="bg-gray-50 text-gray-500 rounded-md px-3 py-2"
+            >
+              {"<<"}
+            </button>
+            <button
+              onClick={() => previousPage()}
+              className="bg-gray-50 text-gray-500 rounded-md px-3 py-2"
+            >
+              Previous
+            </button>
+            <button
+              onClick={() => nextPage()}
+              className="bg-gray-50 text-gray-500 rounded-md px-3 py-2"
+            >
+              Next
+            </button>
+            <button
+              onClick={() => gotoPage(pageCount - 1)}
+              className="bg-gray-50 text-gray-500 rounded-md px-3 py-2"
+            >
+              {">>"}
+            </button>
+          </div>
         </div>
       </div>
-    </div></>
+    </>
   );
 };
 

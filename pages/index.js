@@ -14,21 +14,41 @@ export default function Home({ data, firstFive }) {
           Welcome to your dashboard
         </p>
         <div className="flex flex-wrap justify-between space-y-2 sm:space-y-0 text-center">
-          <div className="bg-[#1F2A40] px-5 py-4 w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-md">
-            <p className="font-semibold text-lg">{data.cases}</p>
-            <span className="text-[#5BC9B4]">Total Cases</span>
+          <div className="flex justify-around bg-[#1F2A40] px-5 py-4 w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-md">
+            <div className="text-3xl my-auto ">
+              <i class="fi fi-sr-users-alt"></i>
+            </div>
+            <div>
+              <p className="font-semibold text-lg">{data.cases}</p>
+              <span className="text-[#5BC9B4]">Total Cases</span>
+            </div>
           </div>
-          <div className="bg-[#1F2A40] px-5 py-4  w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-md">
-            <p className="font-semibold text-lg">{data.todayCases}</p>
-            <span className="text-[#5BC9B4]">Today Cases</span>
+          <div className="flex justify-around bg-[#1F2A40] px-5 py-4  w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-md">
+            <div className="text-3xl my-auto ">
+            <i class="fi fi-sr-user-add"></i>
+            </div>
+            <div>
+              <p className="font-semibold text-lg">{data.todayCases}</p>
+              <span className="text-[#5BC9B4]">Today Cases</span>
+            </div>
           </div>
-          <div className="bg-[#1F2A40] px-5 py-4  w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-md">
-            <p className="font-semibold text-lg">{data.todayDeaths}</p>
-            <span className="text-[#5BC9B4]">Today Death</span>
+          <div className="flex justify-around bg-[#1F2A40] px-5 py-4  w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-md">
+            <div className="text-3xl my-auto ">
+            <i class="fi fi-sr-cross-circle"></i>
+            </div>
+            <div>
+              <p className="font-semibold text-lg">{data.todayDeaths}</p>
+              <span className="text-[#5BC9B4]">Today Death</span>{" "}
+            </div>
           </div>
-          <div className="bg-[#1F2A40] px-5 py-4  w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-md">
-            <p className="font-semibold text-lg">{data.todayRecovered}</p>
-            <span className="text-[#5BC9B4]">Today Recover</span>
+          <div className="flex justify-around bg-[#1F2A40] px-5 py-4  w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-md">
+            <div className="text-3xl my-auto ">
+            <i class="fi fi-ss-following"></i>
+            </div>
+            <div>
+              <p className="font-semibold text-lg">{data.todayRecovered}</p>
+              <span className="text-[#5BC9B4]">Today Recover</span>{" "}
+            </div>
           </div>
         </div>
 
