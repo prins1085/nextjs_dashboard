@@ -20,6 +20,7 @@ const Calendar = () => {
       };
       setEvents([...events, newEvent]);
     }
+    // console.log(events);
   };
 
   const handleEventClick = (selected) => {
@@ -34,31 +35,48 @@ const Calendar = () => {
     }
   };
 
+  const formatDate = (dateString) => {
+    const options = { year: "numeric", month: "short", day: "numeric" };
+    return new Date(dateString).toLocaleDateString(undefined, options);
+  };
+
   return (
     <div className="container">
       <h1 className="text-center text-3xl font-bold">CALENDAR</h1>
       <p className="text-center mb-4 text-[#5BC9B4]">Full Calendar</p>
-      <div className="overflow-x-auto">
-        <FullCalendar
-          plugins={[
-            dayGridPlugin,
-            timeGridPlugin,
-            multiMonthPlugin,
-            interactionPlugin,
-          ]}
-          initialView="timeGridDay"
-          headerToolbar={{
-            left: "prev,next today",
-            center: "title",
-            right: "timeGridDay,timeGridWeek,dayGridMonth",
-          }}
-          height={"100vh"}
-          editable={true}
-          selectable={true}
-          events={events}
-          select={handleSelect}
-          eventClick={handleEventClick}
-        />
+      <div className="flex space-x-8 flex-wrap md:flex-nowrap">
+        <div className="md:w-[30%] w-full bg-[#1F2A40] h-fit p-3 rounded-md">
+          <p className="mb-5">Events</p>
+          {events.map((event) => (
+            <div className="bg-[#5BC9B4] my-2 rounded-sm p-3 text-sm">
+              <p>{event.title}</p>
+              <p>{formatDate(event.start)}</p>
+               
+            </div>
+          ))}
+        </div>
+        <div className="overflow-x-auto w-[70%]">
+          <FullCalendar
+            plugins={[
+              dayGridPlugin,
+              timeGridPlugin,
+              multiMonthPlugin,
+              interactionPlugin,
+            ]}
+            initialView="timeGridDay"
+            headerToolbar={{
+              left: "prev,next today",
+              center: "title",
+              right: "timeGridDay,timeGridWeek,dayGridMonth",
+            }}
+            height={"100vh"}
+            editable={true}
+            selectable={true}
+            events={events}
+            select={handleSelect}
+            eventClick={handleEventClick}
+          />
+        </div>
       </div>
     </div>
   );
