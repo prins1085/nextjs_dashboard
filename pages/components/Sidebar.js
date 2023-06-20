@@ -76,10 +76,16 @@ const Sidebar = () => {
                   Country Information
                 </Link>
               </div>
-              <div className="space-x-6">
+              <div className="space-x-5">
                 <i className="fa fa-bar-chart" aria-hidden="true"></i>
                 <Link href="/Barchart" onClick={() => setIsOpen(!isOpen)}>
                   Bar Chart
+                </Link>
+              </div>
+              <div className="space-x-6">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+                <Link href="/Calendar" onClick={() => setIsOpen(!isOpen)}>
+                  Calendar
                 </Link>
               </div>
             </div>
