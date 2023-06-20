@@ -58,7 +58,7 @@ const Calendar = () => {
             <p className="text-[#5BC9B4]">No such Events Found !</p>
           )}
         </div>
-        <div className="overflow-x-auto w-[70%] ">
+        <div className="overflow-x-auto w-[70%]">
           <FullCalendar
             plugins={[
               dayGridPlugin,
@@ -66,7 +66,7 @@ const Calendar = () => {
               multiMonthPlugin,
               interactionPlugin,
             ]}
-            initialView="timeGridWeek"
+            initialView="dayGridMonth"
             // slotMinTime="08:00:00"
             // slotMaxTime="20:00:00"
             headerToolbar={{
@@ -79,7 +79,7 @@ const Calendar = () => {
             selectable={true}
             events={events}
             // eventDisplay="inverse-background"
-            // eventResizableFromStart={true}
+            eventResizableFromStart={true}
            eventOverlap={true}
             select={handleSelect}
             eventClick={handleEventClick}
