@@ -45,7 +45,7 @@ const Sidebar = () => {
             className="block md:hidden text-white"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <i class="fi fi-br-menu-burger"></i>
+            <i className="fi fi-br-menu-burger"></i>
           </button>
           <h1 className="block md:hidden text-white text-2xl font-semibold">NEXT JS</h1>
         </div>
@@ -83,7 +83,7 @@ const Sidebar = () => {
                 </Link>
               </div>
               <div className="space-x-6 hover:text-[#5BC9B4]">
-              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <i className="fa fa-calendar" aria-hidden="true"></i>
                 <Link href="/Calendar" onClick={() => setIsOpen(!isOpen)}>
                   Calendar
                 </Link>

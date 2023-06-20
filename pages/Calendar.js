@@ -47,15 +47,18 @@ const Calendar = () => {
       <div className="flex space-x-8 flex-wrap md:flex-nowrap">
         <div className="md:w-[30%] w-full bg-[#1F2A40] h-fit p-3 rounded-md">
           <p className="mb-5">Events</p>
-          {events.map((event) => (
-            <div className="bg-[#5BC9B4] my-2 rounded-sm p-3 text-sm">
-              <p>{event.title}</p>
-              <p>{formatDate(event.start)}</p>
-               
-            </div>
-          ))}
+          {events.length !== 0 ? (
+            events.map((event) => (
+              <div className="bg-[#5BC9B4] my-2 rounded-sm p-3 text-sm">
+                <p>{event.title}</p>
+                <p>{formatDate(event.start)}</p>
+              </div>
+            ))
+          ) : (
+            <p className="text-[#5BC9B4]">No such Events Found !</p>
+          )}
         </div>
-        <div className="overflow-x-auto w-[70%]">
+        <div className="overflow-x-auto w-[70%] ">
           <FullCalendar
             plugins={[
               dayGridPlugin,
@@ -63,7 +66,9 @@ const Calendar = () => {
               multiMonthPlugin,
               interactionPlugin,
             ]}
-            initialView="timeGridDay"
+            initialView="timeGridWeek"
+            // slotMinTime="08:00:00"
+            // slotMaxTime="20:00:00"
             headerToolbar={{
               left: "prev,next today",
               center: "title",
@@ -73,8 +78,12 @@ const Calendar = () => {
             editable={true}
             selectable={true}
             events={events}
+            // eventDisplay="inverse-background"
+            // eventResizableFromStart={true}
+           eventOverlap={true}
             select={handleSelect}
             eventClick={handleEventClick}
+            nowIndicator={true}
           />
         </div>
       </div>
