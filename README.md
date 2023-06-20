@@ -12,4 +12,7 @@
 **Full Calendar**
 
 ![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/38f5c629-ac38-4693-a6f6-297c0dae3d20)
+Events
+![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/474a3a04-539b-46f7-9b23-30d93d04920a)
+
 
