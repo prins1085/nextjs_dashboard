@@ -58,7 +58,7 @@ const Sidebar = () => {
             NEXT JS
           </h1>
           <div className="space-y-8">
-            <div className="space-x-6">
+            <div className="space-x-6 hover:text-[#5BC9B4]">
               <i className="fa fa-home" aria-hidden="true"></i>
               <Link
                 href="/"
@@ -70,19 +70,19 @@ const Sidebar = () => {
             </div>
             <div className="flex flex-col space-y-2">
               <p className="text-gray-500 font-semibold py-1 text-sm">Pages</p>
-              <div className="space-x-6">
+              <div className="space-x-6 hover:text-[#5BC9B4]">
                 <i className="fa fa-flag" aria-hidden="true"></i>
                 <Link href="/CountryInfo" onClick={() => setIsOpen(!isOpen)}>
                   Country Information
                 </Link>
               </div>
-              <div className="space-x-5">
+              <div className="space-x-5 hover:text-[#5BC9B4]">
                 <i className="fa fa-bar-chart" aria-hidden="true"></i>
                 <Link href="/Barchart" onClick={() => setIsOpen(!isOpen)}>
                   Bar Chart
                 </Link>
               </div>
-              <div className="space-x-6">
+              <div className="space-x-6 hover:text-[#5BC9B4]">
               <i class="fa fa-calendar" aria-hidden="true"></i>
                 <Link href="/Calendar" onClick={() => setIsOpen(!isOpen)}>
                   Calendar
