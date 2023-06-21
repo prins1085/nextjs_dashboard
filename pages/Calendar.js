@@ -74,16 +74,22 @@ const Calendar = () => {
               center: "title",
               right: "timeGridDay,timeGridWeek,dayGridMonth",
             }}
-            height={"100vh"}
             editable={true}
             selectable={true}
             events={events}
             // eventDisplay="inverse-background"
             eventResizableFromStart={true}
-           eventOverlap={true}
+            eventOverlap={true}
             select={handleSelect}
             eventClick={handleEventClick}
             nowIndicator={true}
+            navLinks
+            businessHours={{
+              daysOfWeek: [1, 2, 3, 4,5],
+              startTime: "09:30",
+              endTime: "18:30",
+            }}
+            // eventColor= '#378006'
           />
         </div>
       </div>
