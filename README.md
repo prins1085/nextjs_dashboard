@@ -17,7 +17,8 @@
 ![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/2fa96d43-42fe-407d-a4e8-241fc8f177e1)
 
 Events
-![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/68dae674-97e8-46ae-b346-cdeec15b4626)
+![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/0af65a6d-7a53-40cc-b84e-19f9e76b2f0b)
+
 
 
 
