@@ -67,8 +67,8 @@ const Calendar = () => {
               interactionPlugin,
             ]}
             initialView="dayGridMonth"
-            // slotMinTime="08:00:00"
-            // slotMaxTime="20:00:00"
+            slotMinTime="08:00:00"
+            slotMaxTime="22:00:00"
             headerToolbar={{
               left: "prev,next today",
               center: "title",
@@ -90,6 +90,8 @@ const Calendar = () => {
               endTime: "18:30",
             }}
             // eventColor= '#378006'
+            allDaySlot={false}
+            // showNonCurrentDates={false}
           />
         </div>
       </div>
