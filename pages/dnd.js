@@ -9,7 +9,7 @@ const dnd = () => {
       <h1 className="text-center text-3xl font-bold">DRAG AND DROP</h1>
       <p className="text-center mb-10 text-[#5BC9B4]">React Beautiful DND</p>
 
-      <div className="flex justify-between w-full gap-20 flex-wrap md:flex-nowrap">
+      <div className="flex justify-between w-full gap-10 flex-wrap md:flex-nowrap">
         {/* pending list */}
         <div className="md:w-1/3 w-full flex flex-col">
           <div className="flex justify-between text-xl mb-6 font-bold">
@@ -24,7 +24,7 @@ const dnd = () => {
                   className="text-[10px]"
                   onClick={() => setPendingInputBox(false)}
                 >
-                  <i class="fi fi-br-cross"></i>
+                  <i className="fi fi-br-cross"></i>
                 </button>
               </div>
               <input
@@ -41,19 +41,19 @@ const dnd = () => {
             <div className="bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C]">
               <p>Task 1</p>
               <div className="flex justify-end items-end h-8">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <i className="fa fa-clock-o" aria-hidden="true"></i>
               </div>
             </div>
             <div className="bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C]">
               <p>Task 2</p>
               <div className="flex justify-end items-end h-8">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <i className="fa fa-clock-o" aria-hidden="true"></i>
               </div>
             </div>
             <div className="bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C]">
               <p>Task 3</p>
               <div className="flex justify-end items-end h-8">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <i className="fa fa-clock-o" aria-hidden="true"></i>
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@ const dnd = () => {
                   className="text-[10px]"
                   onClick={() => setProgressInputBox(false)}
                 >
-                  <i class="fi fi-br-cross"></i>
+                  <i className="fi fi-br-cross"></i>
                 </button>
               </div>
               <input
@@ -89,13 +89,13 @@ const dnd = () => {
             <div className="bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C]">
               <p>Task 1</p>
               <div className="flex justify-end items-end h-8">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <i className="fa fa-clock-o" aria-hidden="true"></i>
               </div>
             </div>
             <div className="bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C]">
               <p>Task 2</p>
               <div className="flex justify-end items-end h-8">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <i className="fa fa-clock-o" aria-hidden="true"></i>
               </div>
             </div>
           </div>
@@ -114,7 +114,7 @@ const dnd = () => {
                   className="text-[10px]"
                   onClick={() => setCompleteInputBox(false)}
                 >
-                  <i class="fi fi-br-cross"></i>
+                  <i className="fi fi-br-cross"></i>
                 </button>
               </div>
               <input
@@ -131,7 +131,7 @@ const dnd = () => {
             <div className="bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C]">
               <p>Task 1</p>
               <div className="flex justify-end items-end h-8">
-                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <i className="fa fa-clock-o" aria-hidden="true"></i>
               </div>
             </div>
           </div>

@@ -16,7 +16,7 @@ export default function Home({ data, firstFive }) {
         <div className="flex flex-wrap justify-between space-y-2 sm:space-y-0 text-center">
           <div className="flex justify-around bg-[#1F2A40] px-5 py-4 w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-md">
             <div className="text-3xl my-auto ">
-              <i class="fi fi-sr-users-alt"></i>
+              <i className="fi fi-sr-users-alt"></i>
             </div>
             <div>
               <p className="font-semibold text-lg">{data.cases}</p>
@@ -25,7 +25,7 @@ export default function Home({ data, firstFive }) {
           </div>
           <div className="flex justify-around bg-[#1F2A40] px-5 py-4  w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-md">
             <div className="text-3xl my-auto ">
-            <i class="fi fi-sr-user-add"></i>
+            <i className="fi fi-sr-user-add"></i>
             </div>
             <div>
               <p className="font-semibold text-lg">{data.todayCases}</p>
@@ -34,7 +34,7 @@ export default function Home({ data, firstFive }) {
           </div>
           <div className="flex justify-around bg-[#1F2A40] px-5 py-4  w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-md">
             <div className="text-3xl my-auto ">
-            <i class="fi fi-sr-cross-circle"></i>
+            <i className="fi fi-sr-cross-circle"></i>
             </div>
             <div>
               <p className="font-semibold text-lg">{data.todayDeaths}</p>
@@ -43,7 +43,7 @@ export default function Home({ data, firstFive }) {
           </div>
           <div className="flex justify-around bg-[#1F2A40] px-5 py-4  w-full sm:w-1/2 md:w-1/4 lg:w-1/5 rounded-md">
             <div className="text-3xl my-auto ">
-            <i class="fi fi-ss-following"></i>
+            <i className="fi fi-ss-following"></i>
             </div>
             <div>
               <p className="font-semibold text-lg">{data.todayRecovered}</p>
