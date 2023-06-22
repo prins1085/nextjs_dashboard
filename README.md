@@ -19,6 +19,11 @@
 Events
 ![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/0af65a6d-7a53-40cc-b84e-19f9e76b2f0b)
 
+React Beautiful DND
+
+![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/26ed5895-596c-44c0-9f1d-56a3c1938960)
+
+
 
 
 
