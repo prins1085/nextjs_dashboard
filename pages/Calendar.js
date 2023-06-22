@@ -11,6 +11,7 @@ const Calendar = () => {
   const handleSelect = (info) => {
     const { start, end } = info;
     const eventNamePrompt = prompt("Enter Event Name");
+    alert(info.jsEvent.pageX);
     if (eventNamePrompt) {
       const newEvent = {
         start,

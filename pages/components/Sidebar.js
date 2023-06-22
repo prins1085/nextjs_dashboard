@@ -100,6 +100,12 @@ const Sidebar = () => {
                   Calendar
                 </Link>
               </div>
+              <div className="space-x-6 hover:text-[#5BC9B4]">
+              <i class="fa fa-arrows" aria-hidden="true"></i>
+                <Link href="/dnd" onClick={() => setIsOpen(!isOpen)}>
+                  React Beautiful DND
+                </Link>
+              </div>
             </div>
           </div>
         </div>
