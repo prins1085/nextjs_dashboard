@@ -4,6 +4,26 @@ const dnd = () => {
   const [pendingInputBox, setPendingInputBox] = useState(false);
   const [progressInputBox, setProgressInputBox] = useState(false);
   const [completeInputBox, setCompleteInputBox] = useState(false);
+
+  const [pendingTask, setPendingTask] = useState("");
+  const [pendingLists, setPendingLists] = useState([]);
+  const [progressTask, setProgressTask] = useState("");
+  const [progressLists, setProgressLists] = useState([]);
+  const [completedTask, setCompletedTask] = useState("");
+  const [completedLists, setCompletedLists] = useState([]);
+
+  const addPendingTaskHandler = () => {
+    setPendingLists((prevTask) => [...prevTask, pendingTask]);
+    setPendingTask("");
+  };
+  const addProgressTaskHandler = () => {
+    setProgressLists((prevTask) => [...prevTask, progressTask]);
+    setProgressTask("");
+  };
+  const addCompletedTaskHandler = () => {
+    setCompletedLists((prevTask) => [...prevTask, completedTask]);
+    setCompletedTask("");
+  };
   return (
     <div className="container">
       <h1 className="text-center text-3xl font-bold">DRAG AND DROP</h1>
@@ -31,32 +51,25 @@ const dnd = () => {
                 type="text"
                 className="bg-transparent outline-none border-b-[#32BBB4] border-b-[1px]"
                 placeholder="e.g. Send Invitation"
+                value={pendingTask}
+                onChange={(e) => setPendingTask(e.target.value)}
               />
-              <button className="text-left bg-[#32BBB4] w-fit px-2 py-1 rounded-sm text-black text-sm font-semibold">
+              <button
+                onClick={addPendingTaskHandler}
+                className="text-left bg-[#32BBB4] w-fit px-2 py-1 rounded-sm text-black text-sm font-semibold"
+              >
                 Add
               </button>
             </div>
           )}
-          <div>
+          {pendingLists.map((pendingList) => (
             <div className="bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C]">
-              <p>Task 1</p>
+              <p>{pendingList}</p>
               <div className="flex justify-end items-end h-8">
                 <i className="fa fa-clock-o" aria-hidden="true"></i>
               </div>
             </div>
-            <div className="bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C]">
-              <p>Task 2</p>
-              <div className="flex justify-end items-end h-8">
-                <i className="fa fa-clock-o" aria-hidden="true"></i>
-              </div>
-            </div>
-            <div className="bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C]">
-              <p>Task 3</p>
-              <div className="flex justify-end items-end h-8">
-                <i className="fa fa-clock-o" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
         {/* in progress list */}
         <div className="md:w-1/3 w-full flex flex-col">
@@ -79,26 +92,25 @@ const dnd = () => {
                 type="text"
                 className="bg-transparent outline-none border-b-[#32BBB4] border-b-[1px]"
                 placeholder="e.g. Send Invitation"
+                value={progressTask}
+                onChange={(e) => setProgressTask(e.target.value)}
               />
-              <button className="text-left bg-[#32BBB4] w-fit px-2 py-1 rounded-sm text-black text-sm font-semibold">
+              <button
+                onClick={addProgressTaskHandler}
+                className="text-left bg-[#32BBB4] w-fit px-2 py-1 rounded-sm text-black text-sm font-semibold"
+              >
                 Add
               </button>
             </div>
           )}
-          <div>
+          {progressLists.map((progressList) => (
             <div className="bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C]">
-              <p>Task 1</p>
+              <p>{progressList}</p>
               <div className="flex justify-end items-end h-8">
                 <i className="fa fa-clock-o" aria-hidden="true"></i>
               </div>
             </div>
-            <div className="bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C]">
-              <p>Task 2</p>
-              <div className="flex justify-end items-end h-8">
-                <i className="fa fa-clock-o" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
         {/* completed list */}
         <div className="md:w-1/3 w-full flex flex-col">
@@ -121,20 +133,25 @@ const dnd = () => {
                 type="text"
                 className="bg-transparent outline-none border-b-[#32BBB4] border-b-[1px]"
                 placeholder="e.g. Send Invitation"
+                value={completedTask}
+                onChange={(e) => setCompletedTask(e.target.value)}
               />
-              <button className="text-left bg-[#32BBB4] w-fit px-2 py-1 rounded-sm text-black text-sm font-semibold">
+              <button
+                onClick={addCompletedTaskHandler}
+                className="text-left bg-[#32BBB4] w-fit px-2 py-1 rounded-sm text-black text-sm font-semibold"
+              >
                 Add
               </button>
             </div>
           )}
-          <div>
+          {completedLists.map((completedList) => (
             <div className="bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C]">
-              <p>Task 1</p>
+              <p>{completedList}</p>
               <div className="flex justify-end items-end h-8">
                 <i className="fa fa-clock-o" aria-hidden="true"></i>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
