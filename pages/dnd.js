@@ -218,7 +218,10 @@ const dnd = () => {
                       >
                         <p>{progressList.name}</p>
                         <div className="flex justify-end items-end h-8">
-                          <i className="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                          <i
+                            className="fas fa-spinner fa-spin"
+                            aria-hidden="true"
+                          ></i>
                         </div>
                       </div>
                     )}
@@ -295,6 +298,7 @@ const dnd = () => {
                     )}
                   </Draggable>
                 ))}
+                {provided.placeholder}
               </div>
             )}
           </Droppable>
