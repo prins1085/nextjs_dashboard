@@ -10,6 +10,10 @@
 
 ![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/84f36e84-ce68-42ca-959f-e8b70eb9cce2)
 
+**Search** 
+
+![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/61e05cef-c074-4e09-8261-0cfe5d0224df)
+
 
 
 **Full Calendar**
