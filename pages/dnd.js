@@ -34,7 +34,7 @@ const dnd = () => {
         <div className="md:w-1/3 w-full flex flex-col">
           <div className="flex justify-between text-xl mb-6 font-bold">
             <span>Pending</span>
-            <button onClick={() => setPendingInputBox(true)}>+</button>
+            <button onClick={() => {setPendingInputBox(true); setProgressInputBox(false); setCompleteInputBox(false)}}>+</button>
           </div>
           {pendingInputBox && (
             <div className="flex flex-col bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C] space-y-2 mb-5">
@@ -75,7 +75,7 @@ const dnd = () => {
         <div className="md:w-1/3 w-full flex flex-col">
           <div className="flex justify-between text-xl mb-6 font-bold">
             <span>In Progress</span>
-            <button onClick={() => setProgressInputBox(true)}>+</button>
+            <button onClick={() => {setProgressInputBox(true); setPendingInputBox(false); setCompleteInputBox(false)}}>+</button>
           </div>
           {progressInputBox && (
             <div className="flex flex-col bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C] space-y-2 mb-5">
@@ -116,7 +116,7 @@ const dnd = () => {
         <div className="md:w-1/3 w-full flex flex-col">
           <div className="flex justify-between text-xl mb-6 font-bold">
             <span>Completed</span>
-            <button onClick={() => setCompleteInputBox(true)}>+</button>
+            <button onClick={() => {setCompleteInputBox(true); setPendingInputBox(false); setProgressInputBox(false)}}>+</button>
           </div>
           {completeInputBox && (
             <div className="flex flex-col bg-[#1F2A40] px-3 pb-2 pt-1 border border-[#3C3F4C] space-y-2 mb-5">
