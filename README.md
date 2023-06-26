@@ -21,7 +21,8 @@ Events
 
 React Beautiful DND
 
-![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/26ed5895-596c-44c0-9f1d-56a3c1938960)
+![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/07699011-3d08-4ed7-95e5-1db870d0e757)
+
 
 
 
