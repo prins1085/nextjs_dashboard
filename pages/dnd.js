@@ -14,22 +14,28 @@ const dnd = () => {
   const [completedLists, setCompletedLists] = useState([]);
 
   const addPendingTaskHandler = () => {
-    let id = Math.random() + 10;
-    const pendingData = { name: pendingTask, id };
-    setPendingLists((prevTask) => [...prevTask, { ...pendingData }]);
-    setPendingTask("");
+    if (pendingTask.trim().length > 0) {
+      let id = Math.random() + 10;
+      const pendingData = { name: pendingTask, id };
+      setPendingLists((prevTask) => [...prevTask, { ...pendingData }]);
+      setPendingTask("");
+    }
   };
   const addProgressTaskHandler = () => {
-    let id = Math.random() + 10;
-    const progressData = { name: progressTask, id };
-    setProgressLists((prevTask) => [...prevTask, { ...progressData }]);
-    setProgressTask("");
+    if (pendingTask.trim().length > 0) {
+      let id = Math.random() + 10;
+      const progressData = { name: progressTask, id };
+      setProgressLists((prevTask) => [...prevTask, { ...progressData }]);
+      setProgressTask("");
+    }
   };
   const addCompletedTaskHandler = () => {
-    let id = Math.random() + 10;
-    const completedData = { name: completedTask, id };
-    setCompletedLists((prevTask) => [...prevTask, { ...completedData }]);
-    setCompletedTask("");
+    if (pendingTask.trim().length > 0) {
+      let id = Math.random() + 10;
+      const completedData = { name: completedTask, id };
+      setCompletedLists((prevTask) => [...prevTask, { ...completedData }]);
+      setCompletedTask("");
+    }
   };
 
   const onDragEnd = (result) => {
