@@ -22,7 +22,7 @@ const dnd = () => {
     }
   };
   const addProgressTaskHandler = () => {
-    if (pendingTask.trim().length > 0) {
+    if (progressTask.trim().length > 0) {
       let id = Math.random() + 10;
       const progressData = { name: progressTask, id };
       setProgressLists((prevTask) => [...prevTask, { ...progressData }]);
@@ -30,7 +30,7 @@ const dnd = () => {
     }
   };
   const addCompletedTaskHandler = () => {
-    if (pendingTask.trim().length > 0) {
+    if (completedTask.trim().length > 0) {
       let id = Math.random() + 10;
       const completedData = { name: completedTask, id };
       setCompletedLists((prevTask) => [...prevTask, { ...completedData }]);
@@ -218,7 +218,7 @@ const dnd = () => {
                       >
                         <p>{progressList.name}</p>
                         <div className="flex justify-end items-end h-8">
-                          <i className="fa fa-clock-o" aria-hidden="true"></i>
+                          <i className="fas fa-spinner fa-spin" aria-hidden="true"></i>
                         </div>
                       </div>
                     )}
@@ -289,7 +289,7 @@ const dnd = () => {
                       >
                         <p>{completedList.name}</p>
                         <div className="flex justify-end items-end h-8">
-                          <i className="fa fa-clock-o" aria-hidden="true"></i>
+                          <i className="fa fa-check" aria-hidden="true"></i>
                         </div>
                       </div>
                     )}
