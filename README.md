@@ -1,6 +1,6 @@
 **Dashboard**
 
-![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/19e318d8-75f2-43f1-8ee1-abac55ff9c34)
+![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/14e17038-2d1e-4dc5-ad4e-a680684f80d1)
 
 
 
