@@ -27,6 +27,10 @@ React Beautiful DND
 
 ![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/74775fb1-492d-4a0b-a79a-324aa403f44b)
 
+DND With Toastify
+![image](https://github.com/prins1085/nextjs_dashboard/assets/109617216/676701e3-fe7a-48ea-a87e-9ff745f874f4)
+
+
 
 
 
