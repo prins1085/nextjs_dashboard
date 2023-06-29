@@ -41,7 +41,7 @@ const dnd = () => {
   };
 
   const onDragEnd = (result) => {
-    console.log(result);
+    // console.log(result);
     const { source, destination } = result;
 
     if (!destination) return;
